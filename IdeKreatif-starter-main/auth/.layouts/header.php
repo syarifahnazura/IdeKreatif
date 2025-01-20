@@ -6,6 +6,16 @@ if ($notification) {
   uset($_SESSION['notification']);
 }
 
+/* 
+jika user sudah login sesuai dengan username atau role maka akan diarahkan ke url: dashboard.php
+*/
+if (isset($_SESSION["username"]) || isset($_SESSION["role"])) {
+  $_SESSION['notification'] = [
+    'type' => 'danger',
+    'message' => 'Silahkan Logout Terlebih Dahulu!'
+  ];
+  header('Location: ../dashboard.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
