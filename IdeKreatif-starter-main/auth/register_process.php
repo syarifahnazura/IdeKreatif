@@ -1,20 +1,20 @@
 <?php 
 require_once("../config.php");
-// mulai session
+// Mulai session 
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $name = $_POST["name"];
     $password = $_POST["password"];
-    $hashesPassword = password_hash($password, PASSWORD_DEFAULT);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql ="INSERT INTO users (username, name, password) values ('$username', '$name', '$hashedPassword')";
+    $sql = "INSERT INTO users (username, name, password) VALUES ('$username', '$name', '$hashedPassword')";
     if ($conn->query($sql) === TRUE) {
-        // simpan notifikasi ke dalam session
+        // Simpan notifikasi ke dalam session
         $_SESSION['notification'] = [
             'type' => 'primary',
-            'message' => 'Registrasi Berhasil'
+            'message' => 'Registrasi Berhasil!'
         ];
     } else {
         $_SESSION['notification'] = [
@@ -27,4 +27,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-?>
+?> 
