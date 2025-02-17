@@ -61,7 +61,7 @@ include '.includes/toast_notification.php';
                                     <i class="bx bx-edit-alt me-2"></i> Edit
                                 </a>
                                 <!-- pilihan delete -->
-                                 <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deletepost_<?= $post['id_post']; ?>">
+                                 <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deletePost_<?= $post['id_post']; ?>">
                                     <i class="bx bx-trash me-2"></i> Delete
                                 </a>
                             </div>
