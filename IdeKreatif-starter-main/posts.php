@@ -46,12 +46,12 @@ include '.includes/header.php';
                             <!-- tombol submit -->
                              <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
                             </form>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            <?php
-                            // menyertakan footer halaman 
-                            include '.includes/footer.php';
-                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+        // menyertakan footer halaman 
+        include '.includes/footer.php';
+        ?>
